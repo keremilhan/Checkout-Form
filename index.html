@@ -5,33 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/593643f9ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Checkout</h1>
     </header>
     <main>
-        <div id="form">
-            <h2>Contact Information</h2><br>
-            <label for="email">Email</label><br>
-            <input type="email" id="email"><br>
-            <label for="phone">Phone</label><br>
-            <input type="phone" id="phone"><br>
-            <h2>Shipping Information</h2><br>
-            <label for="name">Email</label><br>
-            <input type="text" id="name"><br>
-            <label for="address">Address</label><br>
-            <input type="text" id="address"><br>
-            <label for="city">City</label><br>
-            <input type="text" id="citry"><br>
-            <label for="country">Country</label><br>
-            <input type="text" id="country"><br>
-            <label for="postcode">Post Code</label><br>
-            <input type="text" id="postcode">
-
-        </div>
+        <section id="form-section">
+            <form action="" id="form">
+                <h2>Contact Information</h2>
+                <div id="email-cont" class="form-container">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="Enter your email address..."><br>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> 
+                </div>
+                <div id="phone-cont" class="form-container">
+                    <label for="phone">Phone</label><br>
+                    <input type="phone" id="phone" placeholder="Enter your phone number..."><br>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <h2>Shipping Information</h2>
+                <div id="name-cont" class="form-container">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" placeholder="Enter your name..."><br>
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                </div>
+                <div id="address-cont" class="form-container">
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" placeholder="Enter your address..."><br>
+                    <i class="fa-solid fa-building" aria-hidden="true"></i>
+                </div>
+                <div id="city-cont" class="form-container">
+                    <label for="city">City</label><br>
+                    <input type="text" id="city" placeholder="Enter your city..."><br>
+                    <i class="fa-solid fa-building" aria-hidden="true"></i>
+                </div>
+                <div id="country-postcode">
+                    <div id="country-cont" class="form-container">
+                        <label for="country">Country</label><br>
+                        <select id="country" name="country" form="form">
+                            <option value="turkey" selected>Turkey</option>
+                            <option value="uk">UK</option>
+                            <option value="usa">USA</option>
+                            <option value="germany">Germany</option>
+                        </select>
+                    </div>
+                    <div id="postcode-cont" class="form-container">
+                        <label for="postcode">Post Code</label>
+                        <input type="text" id="postcode" placeholder="Enter your postcode">
+                    </div>
+                </div>
+                <div id="checkbox-cont">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">See this information next time</label>
+                </div>
+            </form>
+        </section>
+        <section id="cart-section">
+            <div id="cart">
+                <div class="product" id="product1">
+                    <div class="img">
+                        <img src="img/photo1.png" alt="Backbag">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vintage Backbag</h4>
+                        <div class="prices">
+                            <span>$54.99</span>
+                            <del>$94.99</del>
+                        </div>
+                        
+                        <div class="quantity-bar">
+                            <i class="fa-solid fa-minus"></i>
+                            <span>1</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" id="product2">
+                    <div class="img">
+                        <img src="img/photo2.png" alt="Shoes">
+                    </div>
+                    <div class="product-info">
+                        <h4>Levis Shoes</h4>
+                        <div class="prices">
+                            <span>$74.99</span>
+                            <del>$124.99</del>
+                        </div>
+                        
+                        <div class="quantity-bar">
+                            <i class="fa-solid fa-minus"></i>
+                            <span>1</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="total">
+                    <div id="shipping">
+                        <p>Shipping</p>
+                        <p>$19</p>
+                    </div>
+                    <div id="total-amount">
+                        <p>Total</p>
+                        <p>$148.99</p>
+                    </div>    
+                </div>
+                <button type="submit">Continue</button>
+            </div>
+        </section>
     </main>
-    
-    
 </body>
 </html>
